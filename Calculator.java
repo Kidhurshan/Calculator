@@ -34,12 +34,16 @@ public class Calculator implements ActionListener {
         textField = new JTextField();
         textField.setFont(font);
         textField.setEditable(false);
+        textField.setFocusable(false);
         textField.setBounds(50,25,300,50);
+        textField.setBackground(Color.LIGHT_GRAY);
 
         smallTextField = new JTextField();
         smallTextField.setFont(smallFont);
         smallTextField.setEditable(false);
         smallTextField.setBounds(350,25,20,50);
+        smallTextField.setFocusable(false);
+        smallTextField.setBackground(Color.LIGHT_GRAY);
 
         //set up the panel
         panel = new JPanel();
@@ -176,9 +180,6 @@ public class Calculator implements ActionListener {
         if(e.getSource() == backButton){
             textField.setText(textField.getText().substring(0,textField.getText().length()-1));
         }
-
-
-
 
     }
 
